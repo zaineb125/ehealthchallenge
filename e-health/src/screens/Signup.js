@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Form, Button, Row, Col, Card } from "react-bootstrap";
 import pills from "../images/pills-bottle.png";
 import MyNavbar from "../components/MyNavbar";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
   const [region, setRegion] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,15 +15,18 @@ const Signup = () => {
   const [doctor, setDoctor] = useState("");
   const [supplier, setSupplier] = useState("");
 
-  useEffect(() => {
-    if (pharmacist.length) {
-      localStorage.setItem("type", "pharmacist");
-    } else if (doctor.length) {
-      localStorage.setItem("type", "doctor");
-    } else {
-      localStorage.setItem("type", "supplier");
-    }
-  }, []);
+  const handleClickPharmacist = () => {
+    localStorage.setItem("type", "pharmacist");
+  };
+  const handleClickDoctor = () => {
+    localStorage.setItem("type", "doctor");
+  };
+  const handleClickSupplier = () => {
+    localStorage.setItem("type", "supplier");
+  };
+  const handleSubmit = () => {
+    navigate("/");
+  };
 
   return (
     <div className="container">
@@ -98,7 +104,7 @@ const Signup = () => {
                       name="inlineRadioOptions"
                       id="inlineRadio1"
                       value={pharmacist}
-                      onChange={(e) => setPharmacist(e.target.value)}
+                      onClick={handleClickPharmacist}
                     />
                     <label
                       className="form-check-label"
@@ -115,7 +121,7 @@ const Signup = () => {
                       name="inlineRadioOptions"
                       id="inlineRadio2"
                       value={supplier}
-                      onChange={(e) => setSupplier(e.target.value)}
+                      onClick={handleClickSupplier}
                     />
                     <label
                       className="form-check-label"
@@ -132,7 +138,7 @@ const Signup = () => {
                       name="inlineRadioOptions"
                       id="inlineRadio3"
                       value={doctor}
-                      onChange={(e) => setDoctor(e.target.value)}
+                      onClick={handleClickDoctor}
                     />
                     <label
                       className="form-check-label"
@@ -155,6 +161,7 @@ const Signup = () => {
                   fontWeight: "bold",
                   border: "#08E864",
                 }}
+                onClick={handleSubmit}
               >
                 Submit
               </Button>
