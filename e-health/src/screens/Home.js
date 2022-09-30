@@ -35,8 +35,7 @@ const Home = () => {
           <br />
           <h4 className="descrip" style={{ color: "#ffff" }}>
             <p>
-              Rejoignez notre plateform et soyez certains que votre santé est
-              notre priorité .
+              Rejoignez notre plateform et soyez certains que votre santé est notre priorité .
             </p>
             <br />
             <Button

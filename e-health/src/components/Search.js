@@ -2,17 +2,10 @@ import { React, useState } from "react";
 import TextField from "@mui/material/TextField";
 import "./Search.css";
 import Button from "@mui/material/Button";
-import taswira from "../images/taswira.png";
-import taswira2 from "../images/tounes.png";
-
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea, CardActions, Box } from "@mui/material";
-import ReclamerProduit from "../screens/ReclamerProduit";
-import { useEffect } from "react";
+import tounes from "../images/tounes.png";
+import doliprane from "../images/doliprane.png";
 import MyNavbar from "./MyNavbar";
+import { Card } from "react-bootstrap";
 
 export default function Search() {
   const [ref, setRef] = useState("");
@@ -49,19 +42,20 @@ export default function Search() {
       <br />
       <br />
       <div className={main}>
-        <h2> Reference Of The Medication </h2>
+        <h2 style={{ color: "white" }}> Reference Of The Medication </h2>
         <div className="search">
           <TextField
             id="outlined-basic"
+            className=".bg-light"
             onChange={inputHandler}
-            variant="outlined"
             fullWidth
             label="Reference"
+            style={{ borderColor: "white", weight: "20px" }}
           />
         </div>
         <Button
           variant="contained"
-          color="success"
+          style={{ backgroundColor: "#0BE66C" }}
           onClick={() => productByRef()}
         >
           Search
@@ -70,31 +64,62 @@ export default function Search() {
       {console.log(product)}
       {product && (
         <div className={clas}>
-          <Card sx={{ display: "flex", width: "700px", height: "300px" }}>
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <CardContent sx={{ flex: "1 0 auto" }}>
-                <CardMedia
-                  component="img"
-                  height="150"
-                  image={taswira}
-                  alt="green iguana"
-                />
-                <Typography component="div" variant="h5">
-                  {product.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {product.description}
-                </Typography>
-              </CardContent>
-            </Box>
-            <CardMedia
-              component="img"
-              sx={{ width: 300 }}
-              image={taswira2}
-              alt="Live from space album cover"
-            />
-          </Card>
-          <ReclamerProduit></ReclamerProduit>
+          <div className="row m-0">
+            <div className="col-lg-7 pb-5 pe-lg-5">
+              <div className="row">
+                <div className="col-4" style={{marginLeft:"80px"}}>
+                  <img src={tounes} alt="" />
+                </div>
+                <div style={{ marginLeft: "650px", marginTop: "-450px" }}>
+                  <Card
+                    className="col-7"
+                    style={{
+                      marginBottom: "80px",
+                      marginLeft: "80px",
+                      borderColor: "white",
+                      borderWidth: "3px",
+                      backgroundColor: "#21232F",
+                    }}
+                  >
+                    <Card.Body>
+                      <h2 style={{ color: "#08EA6E" }}>Doliprane :</h2>
+                      <br />
+
+                      <p style={{ color: "white" }}>
+                        DOLIPRANE 1000 mg en comprimés sécables est réservé aux
+                        adultes et à l’enfant de plus de 15 ans. Pour les
+                        adultes et les enfants de plus de 15 ans, prendre 1
+                        comprimé à avaler avec un verre d’eau et à renouveler si
+                        besoin toutes les 6 heures, sans dépasser 4 comprimés
+                        par jour .
+                      </p>
+                      <div>
+                        <Button
+                          style={{
+                            backgroundColor: "#08EA6E",
+                            border: "#08EA6E",
+                            color: "white",
+                            weight: "bold",
+                          }}
+                        >
+                          Déclarer Rupture
+                        </Button>
+                        <br />
+                        <img
+                          src={doliprane}
+                          style={{
+                            width: "150px",
+
+                            marginTop: "-20px",
+                          }}
+                        />
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>

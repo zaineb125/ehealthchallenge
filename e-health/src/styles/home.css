@@ -84,19 +84,11 @@ body {
   padding: 15px 45px;
   font-size: 16px;
 }
-<<<<<<< HEAD
 .sign{
     display:flex;
     justify-content:space-between;
     padding-left: 1000px;
     color:"white"
-=======
-.sign {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 1100px;
-  color: "white";
->>>>>>> e99d31194e1a3ff2f0c0e68f2faaf16b9f7d18bf
 }
 
 .left {
