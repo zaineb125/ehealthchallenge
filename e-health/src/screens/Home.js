@@ -44,6 +44,7 @@ const Home = () => {
                 color: "#21232F",
                 fontWeight: "bold",
                 borderColor: "#21232F",
+                marginRight:"160px"
               }}
             >
               <LinkContainer

@@ -6,6 +6,7 @@ import tounes from "../images/tounes.png";
 import doliprane from "../images/doliprane.png";
 import MyNavbar from "./MyNavbar";
 import { Card } from "react-bootstrap";
+import ReclamerProduit from "../screens/ReclamerProduit";
 
 export default function Search() {
   const [ref, setRef] = useState("");
@@ -46,7 +47,7 @@ export default function Search() {
         <div className="search">
           <TextField
             id="outlined-basic"
-            className=".bg-light"
+            className="bg-light"
             onChange={inputHandler}
             fullWidth
             label="Reference"
@@ -94,16 +95,7 @@ export default function Search() {
                         par jour .
                       </p>
                       <div>
-                        <Button
-                          style={{
-                            backgroundColor: "#08EA6E",
-                            border: "#08EA6E",
-                            color: "white",
-                            weight: "bold",
-                          }}
-                        >
-                          Déclarer Rupture
-                        </Button>
+                        <ReclamerProduit ></ReclamerProduit>
                         <br />
                         <img
                           src={doliprane}

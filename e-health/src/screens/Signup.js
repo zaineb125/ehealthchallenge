@@ -13,10 +13,14 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [pharmacist, setPharmacist] = useState("");
   const [doctor, setDoctor] = useState("");
+  const [dpm, setDpm] = useState("");
   const [supplier, setSupplier] = useState("");
 
   const handleClickPharmacist = () => {
     localStorage.setItem("type", "pharmacist");
+  };
+  const handleClickDpm = () => {
+    localStorage.setItem("type", "dpm");
   };
   const handleClickDoctor = () => {
     localStorage.setItem("type", "doctor");
@@ -38,6 +42,7 @@ const Signup = () => {
           marginLeft: "280px",
           borderColor: "white",
           borderWidth: "3px",
+          backgroundColor:"#21232f"
         }}
       >
         <Card.Body>
@@ -98,6 +103,22 @@ const Signup = () => {
                 <br />
                 <div>
                   <div className="form-check form-check-inline">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      value={dpm}
+                      onClick={handleClickDpm}
+                    />
+                    <label
+                      className="form-check-label"
+                      for="inlineRadio1"
+                      style={{ color: "white" }}
+                    >
+                      DPM
+                    </label>
+                  </div><div className="form-check form-check-inline">
                     <input
                       className="form-check-input"
                       type="radio"

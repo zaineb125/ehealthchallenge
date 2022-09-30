@@ -5,6 +5,7 @@ import Home from "./screens/Home";
 import ReclamerProduit from "./screens/ReclamerProduit";
 import Search from "./components/Search";
 import DescriptionAlerts from "./components/Alerts";
+import Dashboard from "./screens/dashboard";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/reclamer" element={<ReclamerProduit />}></Route>
           <Route path="/search" element={<Search />}></Route>
           <Route path="/alert" element={<DescriptionAlerts />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
         </Routes>
       </Router>
     </div>

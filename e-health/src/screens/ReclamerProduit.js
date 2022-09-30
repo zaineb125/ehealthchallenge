@@ -35,7 +35,13 @@ function ReclamerProduit() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button  style={{
+                          backgroundColor: "#08EA6E",
+                          border: "#08EA6E",
+                          color: "white",
+                          weight: "bold",
+                          marginLeft:"15px"
+                        }} onClick={handleShow}>
         Reclamer
       </Button>
 

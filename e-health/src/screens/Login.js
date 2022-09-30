@@ -22,6 +22,7 @@ const Login = () => {
           marginLeft: "280px",
           borderColor: "white",
           borderWidth: "3px",
+          backgroundColor:"#21232f"
         }}
       >
         <Card.Body>

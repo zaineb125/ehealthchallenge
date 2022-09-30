@@ -4,6 +4,7 @@ import AlertTitle from "@mui/material/AlertTitle";
 import Stack from "@mui/material/Stack";
 import swal from "sweetalert";
 import Swal from "sweetalert2";
+import MyNavbar from "./MyNavbar";
 const doSwal = () => {
   swal({
     title: "Rupture De Doliprane (ref#12655)",
@@ -63,7 +64,10 @@ const doSwal2 = () => {
 };
 export default function DescriptionAlerts() {
   return (
-    <Stack sx={{ width: "50%" }} spacing={2}>
+    <div>
+      <MyNavbar></MyNavbar>
+      <h3 style={{color:"#08E864", marginTop:"100px", marginLeft:"600px"}}>Alerts de rupture reçues </h3>
+      <Stack sx={{ width: "50%", marginLeft: "380px",  marginTop:"100px"}} spacing={2}>
       <Alert severity="error">
         <AlertTitle>Rupture</AlertTitle>
         Un produit est en rupture de stock —{" "}
@@ -75,5 +79,7 @@ export default function DescriptionAlerts() {
         <strong onClick={doSwal2}>Voir les détails !</strong>
       </Alert>
     </Stack>
+    </div>
+    
   );
 }
