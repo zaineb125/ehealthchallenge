@@ -30,12 +30,13 @@ const Home = () => {
       <div className="split right">
         <div className="centered">
           <h1 style={{ color: "#08E864", fontSize: "50px" }}>
-            Rejoignez notre communoté !
+            Rejoignez notre communauté !
           </h1>
           <br />
           <h4 className="descrip" style={{ color: "#ffff" }}>
             <p>
-              Rejoignez notre plateform et soyez certains que votre santé est notre priorité .
+              Rejoignez notre plateform et soyez certains que votre santé est
+              notre priorité .
             </p>
             <br />
             <Button

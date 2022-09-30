@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Form, Button, Row, Card } from "react-bootstrap";
 import login from "../images/login.png";
 import MyNavbar from "../components/MyNavbar";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [region, setRegion] = useState("");
@@ -13,7 +14,7 @@ const Login = () => {
 
   return (
     <div className="container">
-      <MyNavbar/>
+      <MyNavbar />
       <Card
         className="col-7"
         style={{
@@ -59,10 +60,18 @@ const Login = () => {
                   backgroundColor: "#08E864",
                   fontWeight: "bold",
                   border: "#08E864",
+                  margin: 0,
                 }}
               >
                 Submit
               </Button>
+              <br /><br />
+              <p style={{ color: "white" }}>
+                create an account{" "}
+                <Link to="/signup" style={{ color: "white" }}>
+                  signUp
+                </Link>
+              </p>
             </Form>
           </div>
           <div className="centered">
