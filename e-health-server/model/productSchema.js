@@ -3,12 +3,18 @@ import mongoose from "mongoose";
 const productSchema = mongoose.Schema({
   reference: {
     type: String,
-    required: true,
-    unique: true,
+  },
+  name: {
+    type: String,
   },
   description: {
     type: String,
-    required: true,
+  },
+  classe: {
+    type: String,
+  },
+  score: {
+    type: Number,
   },
 });
 

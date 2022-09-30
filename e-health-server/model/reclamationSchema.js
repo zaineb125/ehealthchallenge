@@ -3,22 +3,15 @@ import mongoose from "mongoose";
 const reclamationSchema = mongoose.Schema({
   reference: {
     type: String,
-    required: true,
   },
   region: {
     type: String,
-
-    unique: true,
   },
   typeClient: {
     type: String,
-
-    unique: true,
   },
   etablissement: {
     type: String,
-
-    unique: true,
   },
 });
 

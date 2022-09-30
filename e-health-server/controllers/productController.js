@@ -15,7 +15,10 @@ const getProducts = asyncHandler(async (req, res) => {
 const addProduct = asyncHandler(async (req, res) => {
   const product = new Product({
     reference: req.body.reference,
+    name: req.body.name,
     description: req.body.description,
+    classe: req.body.classe,
+    score: req.body.score,
   });
 
   const createdproduct = await product.save();

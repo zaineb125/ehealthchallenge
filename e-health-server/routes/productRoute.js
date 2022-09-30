@@ -10,6 +10,6 @@ import {
 
 router.route("/allproducts").get(getProducts);
 router.route("/addproducts").post(addProduct);
-router.route("/:ref/products").get(getProductByReference);
+router.route("/:ref/product").get(getProductByReference);
 
 export default router;

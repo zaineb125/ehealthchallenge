@@ -12,7 +12,15 @@ const Signup = () => {
   const [doctor, setDoctor] = useState("");
   const [supplier, setSupplier] = useState("");
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (pharmacist.length) {
+      localStorage.setItem("type", "pharmacist");
+    } else if (doctor.length) {
+      localStorage.setItem("type", "doctor");
+    } else {
+      localStorage.setItem("type", "supplier");
+    }
+  }, []);
 
   return (
     <div className="container">

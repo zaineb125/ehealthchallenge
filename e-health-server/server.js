@@ -4,12 +4,15 @@ import connectDB from "./config/db.js";
 import morgan from "morgan";
 import productRoute from "./routes/productRoute.js";
 import reclamationRoute from "./routes/reclamationRoute.js";
+import cors from "cors";
 
 dotenv.config();
 
 connectDB();
 
 const app = express();
+
+app.use(cors());
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -23,7 +26,6 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoute);
 app.use("/api/reclamations", reclamationRoute);
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(
