@@ -10,6 +10,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions, Box } from "@mui/material";
+import ReclamerProduit from "../screens/ReclamerProduit";
 
 export default function Search() {
   const [inputText, setInputText] = useState("");
@@ -68,9 +69,7 @@ export default function Search() {
             alt="Live from space album cover"
           />
         </Card>
-        <Button variant="contained" color="success">
-          Reclamer
-        </Button>
+        <ReclamerProduit></ReclamerProduit>
       </div>
     </div>
   );
