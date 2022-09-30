@@ -1,8 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
 
-*{
-    background-color: #21232F;
-   
+body {
+  background-color: #21232f;
 }
 
 .service-1 {
@@ -44,8 +43,18 @@
 
 .service-1 .btn-success-gradiant {
   background: #2cdd9b;
-  background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+  background: -webkit-linear-gradient(
+    legacy-direction(to right),
+    #2cdd9b 0%,
+    #1dc8cc 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#2cdd9b),
+    to(#1dc8cc)
+  );
   background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
   background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
   background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
@@ -54,8 +63,18 @@
 
 .service-1 .btn-success-gradiant:hover {
   background: #1dc8cc;
-  background: -webkit-linear-gradient(legacy-direction(to right), #1dc8cc 0%, #2cdd9b 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#1dc8cc), to(#2cdd9b));
+  background: -webkit-linear-gradient(
+    legacy-direction(to right),
+    #1dc8cc 0%,
+    #2cdd9b 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#1dc8cc),
+    to(#2cdd9b)
+  );
   background: -webkit-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
   background: -o-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
   background: linear-gradient(to right, #1dc8cc 0%, #2cdd9b 100%);
@@ -65,30 +84,36 @@
   padding: 15px 45px;
   font-size: 16px;
 }
+<<<<<<< HEAD
 .sign{
     display:flex;
     justify-content:space-between;
     padding-left: 1000px;
     color:"white"
+=======
+.sign {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1100px;
+  color: "white";
+>>>>>>> e99d31194e1a3ff2f0c0e68f2faaf16b9f7d18bf
 }
 
 .left {
-    left: 0;
-   
-  }
-  
-  .right {
-    right: 0;
- 
-  }
-  
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 68%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-.descrip{
-    padding-top:30px;
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.descrip {
+  padding-top: 30px;
 }
